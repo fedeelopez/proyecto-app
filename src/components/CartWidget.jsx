@@ -1,8 +1,8 @@
+import { ShoppingCart } from "lucide-react";
+
 function CartWidget() {
   return (
-    <div>
-      <i class="fa-solid fa-cart-shopping"></i>
-    </div>
+    <ShoppingCart color="white" />
   );
 }
 
