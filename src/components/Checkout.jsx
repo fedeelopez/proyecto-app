@@ -27,7 +27,7 @@ function Checkout() {
       const productRefs = cartItems.map(i => ({ ref: doc(db, 'products', String(i.id)), item: i }));
 
       await runTransaction(db, async (tx) => {
-        // 1) Lee stocks actuales y validar disponibilidad. Guarda lecturas.
+        // 1) Lee stocks actuales y valida disponibilidad. Guarda lecturas.
         const snapshots = [];
         for (const { ref, item } of productRefs) {
           const snap = await tx.get(ref);
